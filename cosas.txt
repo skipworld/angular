@@ -1,0 +1,10 @@
+npm init (Inicia el proyecto y crea el package)
+npm install -g typescript@latest  (para instalar typescript)
+
+
+en visual studio code se instala Live Server
+
+- Para transpilar un TS, se debe usar tsc app.ts y crea app.js
+
+para instalar angular: 
+npm install -g @angular/cli@8.0.0
