@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Listado de Peliculas</h1>
+    <table class="table table-borderd table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Titulo</th>
+                <th>Director</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pelicula of peliculas">
+                <td>{{pelicula.id_pelicula}}</td>
+                <td>{{pelicula.titulo}}</td>
+                <td>{{pelicula.director}}</td>
+                <td>{{pelicula.genero}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p *ngIf="saludar">Hola!! Como va Todo ?</p>
+    <button class="btn btn-primary" (click)="setearSaludo()">Saludar</button>
+</div>
+
