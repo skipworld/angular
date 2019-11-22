@@ -1,0 +1,2 @@
+instalar angular 
+ng i -g @angular/cli

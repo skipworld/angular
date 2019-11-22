@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MyAplicacion": {
+    "proyecto-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,11 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MyAplicacion",
+            "outputPath": "dist/proyecto-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -49,6 +50,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -57,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MyAplicacion:build"
+            "browserTarget": "proyecto-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MyAplicacion:build:production"
+              "browserTarget": "proyecto-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MyAplicacion:build"
+            "browserTarget": "proyecto-angular:build"
           }
         },
         "test": {
@@ -105,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MyAplicacion:serve"
+            "devServerTarget": "proyecto-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MyAplicacion:serve:production"
+              "devServerTarget": "proyecto-angular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "MyAplicacion"
+  "defaultProject": "proyecto-angular"
 }
