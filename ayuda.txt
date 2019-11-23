@@ -1,2 +1,6 @@
 instalar angular 
 ng i -g @angular/cli
+ng new proyecto-angular (Agregar routing NO) y css en plano
+npm i --save bootstrap (Instala bootstrap)
+@import 'bootstrap/dist/css/bootstrap.min.css';
+ng generate component reactivo
